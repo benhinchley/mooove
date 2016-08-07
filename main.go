@@ -93,7 +93,7 @@ func main() {
 	}
 
 	if _, err := vm.Run(p); err != nil {
-		fmt.Println("there was an error running your script\nerror => %s", err)
+		fmt.Printf("there was an error running your script\nerror => %s", err)
 		os.Exit(1)
 	}
 
