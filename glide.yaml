@@ -1,0 +1,4 @@
+package: github.com/benhinchley/mooove
+import:
+- package: github.com/robertkrimen/otto
+- package: github.com/benhinchley/files

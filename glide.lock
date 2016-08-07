@@ -1,0 +1,19 @@
+hash: db2a3775965d633744c642b0c76863a60d2271dd23dc2169fc8c10d044676921
+updated: 2016-08-07T16:09:45.8227379+10:00
+imports:
+- name: github.com/benhinchley/files
+  version: b002e33b1362a5e98436bbd8c586fb4685757dac
+- name: github.com/robertkrimen/otto
+  version: 7d9cbc2befca39869eb0e5bcb0f44c0692c2f8ff
+  subpackages:
+  - parser
+  - ast
+  - dbg
+  - file
+  - registry
+  - token
+- name: gopkg.in/sourcemap.v1
+  version: 8cd1e2e0ddc78dcb4511bcb184d23171bed15c67
+  subpackages:
+  - base64vlq
+testImports: []
