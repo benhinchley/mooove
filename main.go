@@ -76,6 +76,8 @@ func main() {
 
 	vm := otto.New()
 	vm.Set("input", files)
+	vm.Set("srcDir", input)
+	vm.Set("dstDir", output)
 
 	vm.Set("copy", copy)
 	vm.Set("move", move)
