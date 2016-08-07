@@ -9,11 +9,11 @@ import (
 )
 
 func copy(call otto.FunctionCall) otto.Value {
-	src, _ := call.Argument(0).ToString()
-	dst, _ := call.Argument(1).ToString()
+	s, _ := call.Argument(0).ToString()
+	d, _ := call.Argument(1).ToString()
 	res := true
 
-	if err := files.Copy(path.Join(input, src), path.Join(output, dst)); err != nil {
+	if err := files.Copy(path.Join(source, s), path.Join(destination, d)); err != nil {
 		res = false
 	}
 
@@ -22,13 +22,14 @@ func copy(call otto.FunctionCall) otto.Value {
 }
 
 func move(call otto.FunctionCall) otto.Value {
-	src, _ := call.Argument(0).ToString()
-	dst, _ := call.Argument(1).ToString()
+	s, _ := call.Argument(0).ToString()
+	d, _ := call.Argument(1).ToString()
 	res := true
 
-	if err := files.Move(path.Join(input, src), path.Join(output, dst)); err != nil {
+	if err := files.Move(path.Join(source, s), path.Join(destination, d)); err != nil {
 		res = false
 	}
+
 	r, _ := otto.ToValue(res)
 	return r
 }
