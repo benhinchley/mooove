@@ -1,8 +1,8 @@
 hash: db2a3775965d633744c642b0c76863a60d2271dd23dc2169fc8c10d044676921
-updated: 2016-08-13T18:10:45.836515794+10:00
+updated: 2016-08-13T22:52:59.88319188+10:00
 imports:
 - name: github.com/benhinchley/files
-  version: f708ac72070dfce7ac6505cd7233dc600c1d0058
+  version: 0e75bcc9476b26ab1e05831d7ec1108f8241ce7a
 - name: github.com/robertkrimen/otto
   version: 7d9cbc2befca39869eb0e5bcb0f44c0692c2f8ff
   subpackages:
