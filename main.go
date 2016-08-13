@@ -16,15 +16,24 @@ var (
 	script      string
 	source      string
 	destination string
+	v           bool
 )
+
+var Version string
 
 func init() {
 	//flag.BoolVar(&debug, "debug", false, "enable debug mode")
 	flag.StringVar(&script, "s", "", "path to mooove script")
+	flag.BoolVar(&v, "v", false, "print version info")
 	flag.Parse()
 }
 
 func main() {
+	if v {
+		fmt.Printf("mooove - %s\n", Version)
+		os.Exit(0)
+	}
+
 	if script == "" {
 		fmt.Println("urhm you didn't provide a script")
 		os.Exit(1)
