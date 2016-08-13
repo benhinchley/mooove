@@ -34,6 +34,19 @@ func move(call otto.FunctionCall) otto.Value {
 	return r
 }
 
+func symlink(call otto.FunctionCall) otto.Value {
+	s, _ := call.Argument(0).ToString()
+	d, _ := call.Argument(1).ToString()
+	res := true
+
+	if err := files.Symlink(s, d); err != nil {
+		res = false
+	}
+
+	r, _ := otto.ToValue(res)
+	return r
+}
+
 func basename(call otto.FunctionCall) otto.Value {
 	p, _ := call.Argument(0).ToString()
 	res := filepath.Base(p)

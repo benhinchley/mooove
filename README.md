@@ -13,6 +13,7 @@ $ mooove -s <script> <src> <dst>
 ### Helper functions
 * `move(src, dst)` -> moves a file from `src` to `dst`
 * `copy(src, dst)` -> copies a file from `src` to `dst`
+* `symlink(src, dst)` -> symlinks a file from `src` to `dst`
 * `basename(path)` -> returns the basename of the provided path _(uses go's filepath.Base func underneath)_
 * `extname(file)` -> returns the extension of the provided file _(uses go's filepath.Ext func underneath)_
 * `join(file)` -> returns a single path _(uses go's path.Join func underneath)_
