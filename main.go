@@ -70,6 +70,7 @@ func main() {
 	// set helper functions
 	vm.Set("copy", copy)
 	vm.Set("move", move)
+	vm.Set("symlink", symlink)
 	vm.Set("extname", extname)
 	vm.Set("basename", basename)
 	vm.Set("join", join)
