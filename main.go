@@ -19,18 +19,21 @@ var (
 	v           bool
 )
 
-var Version string
+var (
+	Version string
+	Build   string
+)
 
 func init() {
 	//flag.BoolVar(&debug, "debug", false, "enable debug mode")
-	flag.StringVar(&script, "s", "", "path to mooove script")
+	flag.StringVar(&script, "s", "", "path to script")
 	flag.BoolVar(&v, "v", false, "print version info")
 	flag.Parse()
 }
 
 func main() {
 	if v {
-		fmt.Printf("mooove - %s\n", Version)
+		fmt.Printf("mooove - version: %s - build: %s\n", Version, Build)
 		os.Exit(0)
 	}
 
