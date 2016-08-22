@@ -86,6 +86,7 @@ func main() {
 	vm.Set("extname", extname)
 	vm.Set("basename", basename)
 	vm.Set("join", join)
+	vm.Set("directory", directory)
 
 	// parse script
 	defer func() { recover() }()
