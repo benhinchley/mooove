@@ -12,6 +12,7 @@ _obj
 _test
 vendor
 bin
+pkg
 
 # Architecture specific extensions/prefixes
 *.[568vq]
@@ -28,3 +29,7 @@ _testmain.go
 *.exe
 *.test
 *.prof
+
+### Make ###
+build
+dev
